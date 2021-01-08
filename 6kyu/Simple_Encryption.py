@@ -7,8 +7,8 @@ def decrypt(encrypted_text, n):
     for i in range(n):
         decrypted_text = ""
         for j in range(int(length / 2)):
-            decrypted_text += plain_text[i + int(length / 2)]
-            decrypted_text += plain_text[i]
+            decrypted_text += plain_text[j + int(length / 2)]
+            decrypted_text += plain_text[j]
         if length % 2:
             decrypted_text += plain_text[-1]
         plain_text = decrypted_text
@@ -22,8 +22,10 @@ def encrypt(text, n):
     for i in range(n):
         encrypted_text = ""
         for j in range(1, len(plain_text), 2):
-            encrypted_text += plain_text[i]
+            encrypted_text += plain_text[j]
         for j in range(0, len(plain_text), 2):
-            encrypted_text += plain_text[i]
+            encrypted_text += plain_text[j]
         plain_text = encrypted_text
     return encrypted_text
+
+print(decrypt("s eT ashi tist!", 2))
