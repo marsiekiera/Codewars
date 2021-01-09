@@ -22,7 +22,7 @@ def bouncing_ball(h, bounce, window):
     if h <= 0 or bounce >= 1 or bounce <= 0 or window >= h:
         return -1
     see_the_ball = -1
-    while h_after_bounce > window:
+    while h > window:
         see_the_ball += 2
         h *= bounce
     return see_the_ball
