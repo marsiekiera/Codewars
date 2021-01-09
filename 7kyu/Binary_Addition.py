@@ -6,9 +6,5 @@
 
 # The binary number returned should be a string.
 
-
 def add_binary(a,b):
-    return type(format(a + b, 'b'))
-
-
-print(add_binary(16,1))
+    return format(a + b, 'b')
